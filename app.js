@@ -1,7 +1,8 @@
-let currentQ = 0;
+let input = 0;
 let score = 0;
 
-function loadQuestion() {
+function loadQuestion(input) {
+  currentQ = input;
   const q = quizData[currentQ];
   document.getElementById("question-text").innerText = `${q.id}. ${q.question}`;
   document.getElementById("q-count").innerText =
@@ -76,9 +77,9 @@ function selfScore(isCorrect) {
 
 // Shared Navigation
 function nextQuestion() {
-  currentQ++;
+  input = currentQ+1;
   if (currentQ < quizData.length) {
-    loadQuestion();
+    loadQuestion(input);
   } else {
     showResults();
   }
@@ -92,4 +93,4 @@ function showResults() {
 }
 
 // Start the app
-loadQuestion();
+loadQuestion(input);

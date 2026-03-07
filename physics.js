@@ -407,7 +407,7 @@ const quizData = [
   {
     id: 35,
     question:
-      "Which of the following combinations correctly shows the charges on the particles.?",
+      "Which of the following combinations correctly shows the charges on the particles.? Match the following order[ + 1.6 X 10-19 C | -1.6 X 10-19 C | + 3.2 X 10-19 C ]",
     options: {
       a: "proton, neutron, alpha particle",
       b: "alpha particle, electron, neutron",
