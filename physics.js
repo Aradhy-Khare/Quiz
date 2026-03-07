@@ -2,7 +2,7 @@ const quizData = [
   {
     id: 1,
     question:
-      "When light enters from air to glass, it bends toward the normal. If red, blue, and yellow colours are allowed to enter the same glass block at the same angle of incidence, then for which colour, the value of $\\angle i-\\angle r$, be greater?",
+      "When light enters from air to glass, it bends toward the normal. If red, blue, and yellow colours are allowed to enter the same glass block at the same angle of incidence, then for which colour, the value of ∠𝑖 − ∠r, be greater?",
     options: {
       a: "green",
       b: "red",
