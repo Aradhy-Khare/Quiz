@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro-Quiz</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="quiz-container">
+      <div id="game-screen">
+        <div class="header">
+          <span
+            id="topic-tag"
+            style="
+              color: var(--primary);
+              font-size: 0.8rem;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+            "
+            >Physics X</span
+          >
+          <span id="q-count">1/76</span>
+        </div>
+        <div class="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+
+        <div id="question-text" class="question">Loading question...</div>
+
+        <div id="options-container" class="options-grid"></div>
+
+        <div id="subjective-container" style="display: none">
+          <button id="btn-reveal" class="btn-action" onclick="revealAnswer()">
+            Reveal Expected Answer
+          </button>
+          <div id="subjective-answer" class="subjective-answer"></div>
+          <div id="self-score-container" class="self-score-btns">
+            <button class="btn-self-correct" onclick="selfScore(true)">
+              I Got It Right (+1)
+            </button>
+            <button class="btn-self-wrong" onclick="selfScore(false)">
+              I Got It Wrong (0)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="result-screen">
+        <h2>Quiz Complete!</h2>
+        <div class="score-circle" id="final-score">0/95</div>
+        <p id="feedback-text">Keep practicing to master Physics!</p>
+        <button class="btn-action" onclick="location.reload()">
+          Restart Quiz
+        </button>
+      </div>
+    </div>
+
+    <script src="physics.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
