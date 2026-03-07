@@ -35,6 +35,21 @@
 
         <div id="options-container" class="options-grid"></div>
 
+        <div class="jump-to-question">
+          <input 
+            type="number" 
+            id="question-number-input" 
+            min="1" 
+            placeholder="Enter question number"
+          />
+          <button 
+            class="btn-action" 
+            onclick="jumpToQuestion()"
+          >
+            Jump to Question
+          </button>
+        </div>
+
         <div id="subjective-container" style="display: none">
           <button id="btn-reveal" class="btn-action" onclick="revealAnswer()">
             Reveal Expected Answer

@@ -147,6 +147,45 @@ body {
   font-weight: 600;
 }
 
+.jump-to-question {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+#question-number-input {
+  flex: 1;
+  background: #334155;
+  border: 2px solid transparent;
+  color: var(--text);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.2s;
+}
+
+#question-number-input:hover {
+  background: #475569;
+}
+
+#question-number-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #475569;
+}
+
+#question-number-input::placeholder {
+  color: #94a3b8;
+}
+
+.jump-to-question .btn-action {
+  margin: 0;
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
 #result-screen {
   text-align: center;
   display: none;
@@ -157,4 +196,225 @@ body {
   font-weight: 800;
   color: var(--primary);
   margin: 1.5rem 0;
+}
+
+/* Responsive Design */
+
+/* Small phones (below 480px) */
+@media (max-width: 479px) {
+  body {
+    padding: 10px;
+  }
+
+  #quiz-container {
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 100%;
+  }
+
+  .header {
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+  }
+
+  #topic-tag {
+    font-size: 0.65rem !important;
+  }
+
+  #q-count {
+    font-size: 0.85rem;
+  }
+
+  .progress-container {
+    height: 6px;
+    margin-bottom: 1.5rem;
+  }
+
+  .question {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .options-grid {
+    gap: 0.75rem;
+  }
+
+  .option-btn {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-action {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+  }
+
+  .subjective-answer {
+    padding: 1rem;
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+  }
+
+  .self-score-btns {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  .btn-self-correct,
+  .btn-self-wrong {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .jump-to-question {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  #question-number-input {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .jump-to-question .btn-action {
+    margin: 0;
+    width: 100%;
+  }
+
+  .score-circle {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+
+  #result-screen h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #result-screen p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablets (480px to 768px) */
+@media (min-width: 480px) and (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  #quiz-container {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .header {
+    margin-bottom: 1.25rem;
+  }
+
+  .question {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .options-grid {
+    gap: 0.85rem;
+  }
+
+  .option-btn {
+    padding: 0.85rem;
+    font-size: 0.95rem;
+  }
+
+  .jump-to-question {
+    gap: 0.85rem;
+    margin-top: 1.75rem;
+  }
+
+  #question-number-input {
+    padding: 0.85rem;
+    font-size: 0.95rem;
+  }
+
+  .self-score-btns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .score-circle {
+    font-size: 2.5rem;
+  }
+}
+
+/* Medium devices (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #quiz-container {
+    max-width: 600px;
+  }
+
+  .question {
+    font-size: 1.2rem;
+  }
+
+  .score-circle {
+    font-size: 2.75rem;
+  }
+}
+
+/* Large devices (1024px and above) */
+@media (min-width: 1024px) {
+  #quiz-container {
+    max-width: 700px;
+  }
+}
+
+/* Landscape mode adjustments */
+@media (max-height: 600px) {
+  body {
+    min-height: auto;
+    padding: 10px;
+  }
+
+  #quiz-container {
+    padding: 1rem;
+  }
+
+  .header {
+    margin-bottom: 0.75rem;
+  }
+
+  .question {
+    margin-bottom: 0.75rem;
+  }
+
+  .options-grid {
+    gap: 0.5rem;
+  }
+
+  .option-btn {
+    padding: 0.5rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .option-btn {
+    padding: 1.2rem;
+  }
+
+  .btn-action,
+  .btn-self-correct,
+  .btn-self-wrong {
+    padding: 1.2rem;
+  }
+
+  .option-btn:active {
+    transform: scale(0.98);
+  }
+
+  .btn-action:active {
+    opacity: 0.8;
+  }
 }

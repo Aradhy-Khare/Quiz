@@ -85,6 +85,19 @@ function nextQuestion() {
   }
 }
 
+function jumpToQuestion() {
+  const inputValue = document.getElementById("question-number-input").value;
+  const questionNumber = parseInt(inputValue);
+  
+  if (!inputValue || isNaN(questionNumber) || questionNumber < 1 || questionNumber > quizData.length) {
+    alert(`Please enter a valid question number between 1 and ${quizData.length}`);
+    return;
+  }
+  
+  loadQuestion(questionNumber - 1);
+  document.getElementById("question-number-input").value = "";
+}
+
 function showResults() {
   document.getElementById("game-screen").style.display = "none";
   document.getElementById("result-screen").style.display = "block";
