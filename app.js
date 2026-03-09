@@ -77,8 +77,8 @@ function selfScore(isCorrect) {
 
 // Shared Navigation
 function nextQuestion() {
-  input = currentQ+1;
-  if (currentQ < quizData.length) {
+  input = currentQ + 1;
+  if (input < quizData.length) {
     loadQuestion(input);
   } else {
     showResults();
