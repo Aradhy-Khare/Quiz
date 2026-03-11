@@ -19,7 +19,7 @@ function loadQuestion(input) {
   mcqContainer.innerHTML = "";
 
   if (!q.type) {
-    // MCQ Logic
+
     mcqContainer.style.display = "grid";
     subjContainer.style.display = "none";
 
@@ -31,7 +31,7 @@ function loadQuestion(input) {
       mcqContainer.appendChild(btn);
     });
   } else {
-    // Subjective Question Logic
+
     mcqContainer.style.display = "none";
     subjContainer.style.display = "block";
     subjAnswer.style.display = "none";
@@ -41,7 +41,6 @@ function loadQuestion(input) {
   }
 }
 
-// Handler for MCQs
 function checkAnswer(choice, btn) {
   const correct = quizData[currentQ].answer;
   const btns = document.querySelectorAll(".option-btn");
@@ -63,7 +62,6 @@ function checkAnswer(choice, btn) {
   }, 1500);
 }
 
-// Handlers for Subjective Questions
 function revealAnswer() {
   document.getElementById("btn-reveal").style.display = "none";
   document.getElementById("subjective-answer").style.display = "block";
@@ -75,7 +73,6 @@ function selfScore(isCorrect) {
   nextQuestion();
 }
 
-// Shared Navigation
 function nextQuestion() {
   input = currentQ + 1;
   if (input < quizData.length) {
@@ -105,5 +102,4 @@ function showResults() {
     `${score}/${quizData.length}`;
 }
 
-// Start the app
 loadQuestion(input);

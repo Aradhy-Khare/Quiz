@@ -1,5 +1,4 @@
 const quizData = [
-  // --- MULTIPLE CHOICE QUESTIONS (1-32) ---
   {
     id: 1,
     question:

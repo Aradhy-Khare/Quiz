@@ -92,7 +92,7 @@
     </div>
 
     <script>
-      // Get the selected subject from sessionStorage or default to 'chemistry'
+
       const selectedSubject = sessionStorage.getItem('selectedSubject') || 'chemistry';
       document.getElementById('subject-select').value = selectedSubject;
       
@@ -104,11 +104,9 @@
       };
       document.getElementById('topic-tag').innerText = subjectNames[selectedSubject];
       
-      // Create and load the subject script dynamically
       const subjectScript = document.createElement('script');
       subjectScript.src = selectedSubject + '.js';
       
-      // Load app.js only after the subject script is loaded
       subjectScript.onload = function() {
         const appScript = document.createElement('script');
         appScript.src = 'app.js';
@@ -128,9 +126,9 @@
       
       document.getElementById('subject-select').addEventListener('change', function(e) {
         const selectedSubject = e.target.value;
-        // Update the topic tag before reloading
+
         document.getElementById('topic-tag').innerText = subjectNames[selectedSubject];
-        // Store the selected subject and reload the page
+        
         sessionStorage.setItem('selectedSubject', selectedSubject);
         location.reload();
       });

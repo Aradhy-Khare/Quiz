@@ -198,9 +198,6 @@ body {
   margin: 1.5rem 0;
 }
 
-/* Responsive Design */
-
-/* Small phones (below 480px) */
 @media (max-width: 479px) {
   body {
     padding: 10px;
@@ -300,7 +297,6 @@ body {
   }
 }
 
-/* Tablets (480px to 768px) */
 @media (min-width: 480px) and (max-width: 768px) {
   body {
     padding: 15px;
@@ -348,7 +344,6 @@ body {
   }
 }
 
-/* Medium devices (768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   #quiz-container {
     max-width: 600px;
@@ -363,14 +358,12 @@ body {
   }
 }
 
-/* Large devices (1024px and above) */
 @media (min-width: 1024px) {
   #quiz-container {
     max-width: 700px;
   }
 }
 
-/* Landscape mode adjustments */
 @media (max-height: 600px) {
   body {
     min-height: auto;
@@ -398,7 +391,6 @@ body {
   }
 }
 
-/* Touch device optimizations */
 @media (hover: none) and (pointer: coarse) {
   .option-btn {
     padding: 1.2rem;
