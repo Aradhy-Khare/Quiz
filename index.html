@@ -29,6 +29,7 @@
             <option value="chemistry" selected>Chemistry</option>
             <option value="physics">Physics</option>
             <option value="history">History</option>
+            <option value="history2">History 2</option>
           </select>
           <span
             id="topic-tag"
@@ -100,7 +101,8 @@
         biology: 'Biology X',
         chemistry: 'Chemistry X',
         physics: 'Physics X',
-        history: 'History X'
+        history: 'History X',
+        history2: 'History 2 X'
       };
       document.getElementById('topic-tag').innerText = subjectNames[selectedSubject];
       
@@ -121,7 +123,8 @@
         biology: 'Biology X',
         chemistry: 'Chemistry X',
         physics: 'Physics X',
-        history: 'History X'
+        history: 'History X',
+        history2: 'History 2 X'
       };
       
       document.getElementById('subject-select').addEventListener('change', function(e) {
